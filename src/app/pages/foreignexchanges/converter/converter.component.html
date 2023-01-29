@@ -1,0 +1,23 @@
+<section>
+    <div class="currently">
+        <p>ISO: {{myCurrency.base}}</p>
+        <p>DATE: {{myCurrency.date}}</p>
+        <p>AMOUNT: {{myCurrency.amount}}</p>
+    </div>
+    <ng-container *ngFor="let item of myCurrency.isos">
+        <div class="currencies">
+            <div (click)="changeISO(item.iso)">
+                <h3>ISO</h3>
+                <p>{{item.iso}}</p>
+            </div>
+            <div>
+                <h3>BASE</h3>
+                <p>{{item.rate}}</p>
+            </div>
+            <div>
+                <h3>EXCHANGE</h3>
+                <p>{{item.exchange}}</p>
+            </div>
+        </div>
+    </ng-container>
+</section>
